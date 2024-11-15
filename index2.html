@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARGUMENT IN JAVASCRIPT</title>
+</head>
+<body>
+    <p>Finding the largest number</p>
+    <p id="largest_number"></p>
+    <script>
+        function findMax()
+        {
+            var i;
+            var max = 0;
+            for(i = 0; i < arguments.length; i++)
+        {
+           if (arguments[i] > max ) 
+           {
+            max = arguments[i];
+           }
+        }
+        return max;
+        }
+        document.getElementById("largest_number").innerHTML = findMax (10000 , 100002 , 10000000000011001);
+    </script>
+</body>
+</html>
